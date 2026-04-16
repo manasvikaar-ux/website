@@ -1,8 +1,21 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
+import createMDX from '@next/mdx';
 import type { NextConfig } from 'next';
 import './src/libs/Env';
 
+const withMDX = createMDX({});
+
 const baseConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'lh3.googleusercontent.com',
+        pathname: '/**',
+        protocol: 'https',
+      },
+    ],
+  },
+  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
   devIndicators: {
     position: 'bottom-right',
   },
@@ -11,10 +24,12 @@ const baseConfig: NextConfig = {
   reactCompiler: process.env.NODE_ENV === 'production',
 };
 
-let configWithPlugins = baseConfig;
+// Step 1: MDX first
+let config = withMDX(baseConfig);
 
+// Step 2: optionally wrap analyzer
 if (process.env.ANALYZE === 'true') {
-  configWithPlugins = withBundleAnalyzer()(configWithPlugins);
+  config = withBundleAnalyzer()(config);
 }
 
-export default configWithPlugins;
+export default config;

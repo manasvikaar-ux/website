@@ -1,0 +1,142 @@
+'use client';
+
+import type { Transition, Variants } from 'motion/react';
+import { motion, useAnimation } from 'motion/react';
+import type { HTMLAttributes } from 'react';
+import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
+import { cn } from '@/shared/lib/utils';
+
+export type ClockIconHandle = {
+  startAnimation: () => void;
+  stopAnimation: () => void;
+};
+
+type ClockIconProps = {
+  size?: number;
+} & HTMLAttributes<HTMLButtonElement>;
+
+const HAND_TRANSITION: Transition = {
+  duration: 0.6,
+  ease: [0.4, 0, 0.2, 1],
+};
+
+const HAND_VARIANTS: Variants = {
+  animate: {
+    originX: '0%',
+    originY: '100%',
+    rotate: 360,
+  },
+  normal: {
+    originX: '0%',
+    originY: '100%',
+    rotate: 0,
+  },
+};
+
+const MINUTE_HAND_TRANSITION: Transition = {
+  duration: 0.5,
+  ease: 'easeInOut',
+};
+
+const MINUTE_HAND_VARIANTS: Variants = {
+  animate: {
+    originX: '0%',
+    originY: '100%',
+    rotate: 45,
+  },
+  normal: {
+    originX: '0%',
+    originY: '100%',
+    rotate: 0,
+  },
+};
+
+const ClockIcon = forwardRef<ClockIconHandle, ClockIconProps>(
+  ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
+    const controls = useAnimation();
+    const isControlledRef = useRef(false);
+
+    useImperativeHandle(ref, () => {
+      isControlledRef.current = true;
+
+      return {
+        startAnimation: () => {
+          void controls.start('animate');
+        },
+        stopAnimation: () => {
+          void controls.start('normal');
+        },
+      };
+    });
+
+    const handleMouseEnter = useCallback(
+      (e: React.MouseEvent<HTMLButtonElement>) => {
+        if (isControlledRef.current) {
+          onMouseEnter?.(e);
+        } else {
+          void controls.start('animate');
+        }
+      },
+      [controls, onMouseEnter]
+    );
+
+    const handleMouseLeave = useCallback(
+      (e: React.MouseEvent<HTMLButtonElement>) => {
+        if (isControlledRef.current) {
+          onMouseLeave?.(e);
+        } else {
+          void controls.start('normal');
+        }
+      },
+      [controls, onMouseLeave]
+    );
+
+    return (
+      <button
+        className={cn(className)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        {...props}
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height={size}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <motion.line
+            animate={controls}
+            initial="normal"
+            transition={HAND_TRANSITION}
+            variants={HAND_VARIANTS}
+            x1="12"
+            x2="12"
+            y1="12"
+            y2="6"
+          />
+          <motion.line
+            animate={controls}
+            initial="normal"
+            transition={MINUTE_HAND_TRANSITION}
+            variants={MINUTE_HAND_VARIANTS}
+            x1="12"
+            x2="16"
+            y1="12"
+            y2="12"
+          />
+        </svg>
+      </button>
+    );
+  }
+);
+
+ClockIcon.displayName = 'ClockIcon';
+
+export { ClockIcon };

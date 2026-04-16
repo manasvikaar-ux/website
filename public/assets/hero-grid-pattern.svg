@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <pattern id="isoCube" x="0" y="0" width="150" height="173" patternUnits="userSpaceOnUse">
+      <!-- Top-right edge -->
+      <line x1="75" y1="0" x2="150" y2="43.25" stroke="#d8d8e0" stroke-width="0.8" />
+      <!-- Top-left edge -->
+      <line x1="75" y1="0" x2="0" y2="43.25" stroke="#d8d8e0" stroke-width="0.8" />
+      <!-- Right descending edge -->
+      <line x1="150" y1="43.25" x2="150" y2="129.75" stroke="#d8d8e0" stroke-width="0.8" />
+      <!-- Left descending edge -->
+      <line x1="0" y1="43.25" x2="0" y2="129.75" stroke="#d8d8e0" stroke-width="0.8" />
+      <!-- Bottom-right edge -->
+      <line x1="150" y1="129.75" x2="75" y2="173" stroke="#d8d8e0" stroke-width="0.8" />
+      <!-- Bottom-left edge -->
+      <line x1="0" y1="129.75" x2="75" y2="173" stroke="#d8d8e0" stroke-width="0.8" />
+      <!-- Center vertical line -->
+      <line x1="75" y1="86.5" x2="75" y2="173" stroke="#d8d8e0" stroke-width="0.8" />
+      <!-- Inner top-right to center -->
+      <line x1="150" y1="43.25" x2="75" y2="86.5" stroke="#d8d8e0" stroke-width="0.8" />
+      <!-- Inner top-left to center -->
+      <line x1="0" y1="43.25" x2="75" y2="86.5" stroke="#d8d8e0" stroke-width="0.8" />
+    </pattern>
+    <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="white" stop-opacity="0" />
+      <stop offset="0.85" stop-color="white" stop-opacity="0" />
+      <stop offset="1" stop-color="white" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="fadeTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="white" stop-opacity="0.7" />
+      <stop offset="0.15" stop-color="white" stop-opacity="0" />
+      <stop offset="1" stop-color="white" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="#f8f8fc" />
+  <rect width="1920" height="1080" fill="url(#isoCube)" />
+  <rect width="1920" height="1080" fill="url(#fadeTop)" />
+  <rect width="1920" height="1080" fill="url(#fadeBottom)" />
+</svg>

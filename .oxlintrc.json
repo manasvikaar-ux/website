@@ -1,9 +1,18 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "extends": [
-    "./node_modules/ultracite/config/oxlint/core/.oxlintrc.json",
-    "./node_modules/ultracite/config/oxlint/next/.oxlintrc.json",
-    "./node_modules/ultracite/config/oxlint/react/.oxlintrc.json"
+  "plugins": [
+    "eslint",
+    "typescript",
+    "unicorn",
+    "oxc",
+    "import",
+    "jsdoc",
+    "node",
+    "promise",
+    "nextjs",
+    "react",
+    "react-perf",
+    "jsx-a11y"
   ],
   "rules": {
     "no-warning-comments": "off", // Allow TODO and FIXME comments
