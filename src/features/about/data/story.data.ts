@@ -2,8 +2,7 @@ import { aboutStorySchema } from '@/features/about/schemas/story.schema';
 
 export const aboutStory = aboutStorySchema.parse({
   imgAlt: 'Team brainstorming session',
-  imgSrc:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuBVoe_I3Bg9xATAItHxrMpssoidTWGxflkiofcyviLXpaspYhHBJYbTyGjVdETU8MjSsUv7yYuA7gSLcTBaRQlFpRX1rSNdN6aFm0wnV77jwAtWcdW6XIGeR418xIvGyLLeDLMMd-MQOlwJeUs5pezikKf-KXlT0RWMT5_VBMT0-IejiG4Tk-2FV7KlnxK1LnKlhmvHFh2UJ-Td8tTF2PhdidYXGsryh7_-Yh9yRHeq4GYYVKro-seF_pLrYcmL6aGvNvUrDWKqOmU',
+  imgSrc: '/about/story/story.png',
   sections: [
     {
       heading: '',

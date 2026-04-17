@@ -5,15 +5,6 @@ import type { NextConfig } from 'next';
 const withMDX = createMDX({});
 
 const baseConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        hostname: 'lh3.googleusercontent.com',
-        pathname: '/**',
-        protocol: 'https',
-      },
-    ],
-  },
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
   devIndicators: {
     position: 'bottom-right',
