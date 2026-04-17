@@ -20,7 +20,7 @@ const config: KnipConfig = {
     'src/shared/components/example.tsx',
     'src/shared/components/ui/*.tsx',
     'src/lib/utils.ts',
-    'src/libs/*.ts',
+    'src/lib/formsubmit.ts',
   ],
   ignoreDependencies: ['@commitlint/types', '@swc/helpers', 'postcss'],
   compilers: {

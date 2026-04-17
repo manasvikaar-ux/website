@@ -36,20 +36,16 @@ export const TestimonialsSection = () => {
               {testimonialsSectionContent.description}
             </p>
             <div className="flex items-center gap-4">
-              <button
+              <ArrowLeftIcon
                 className="flex h-14 w-14 items-center justify-center rounded-md border border-black bg-white text-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
                 onClick={prev}
-                type="button"
-              >
-                <ArrowLeftIcon size={24} />
-              </button>
-              <button
+                size={24}
+              />
+              <ArrowRightIcon
                 className="flex h-14 w-14 items-center justify-center rounded-md border border-black bg-gray-900 text-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
                 onClick={next}
-                type="button"
-              >
-                <ArrowRightIcon size={24} />
-              </button>
+                size={24}
+              />
               <span className="text-sm text-gray-400">
                 {index + 1} / {testimonials.length}
               </span>
