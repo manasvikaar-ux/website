@@ -8,7 +8,7 @@ export const aboutTeam = z.array(aboutTeamMemberSchema).parse([
   {
     bio: 'Driven by a belief that healing is a human right, not a privilege. Built Manasvikaar to be the space they once wished existed',
     imgAlt: 'Moitree Sarkar',
-    imgSrc: '/about/team/member1.png',
+    imgSrc: '/about/team/moitree.webp',
     name: 'Moitree Sarkar',
     role: 'Founder',
     roleClassName: 'text-primary',
@@ -17,9 +17,9 @@ export const aboutTeam = z.array(aboutTeamMemberSchema).parse([
   {
     bio: 'A licensed psychologist with a background in trauma-informed care and expressive therapies. Guides the therapeutic approach across all programmes.',
     imgAlt: 'Lead Therapist Name',
-    imgSrc: '/about/team/member2.png',
+    imgSrc: '/about/team/ankush.webp',
     name: 'Anksuh Hazra',
-    role: 'Head of Clinical Services',
+    role: 'Technical Head',
     roleClassName: 'text-blue-500',
     shadowColor: 'bg-blue-200',
   },
