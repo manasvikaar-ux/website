@@ -6,7 +6,7 @@ import {
 
 export const aboutTeam = z.array(aboutTeamMemberSchema).parse([
   {
-    bio: 'Driven by a belief that healing is a human right, not a privilege. Built Manasvikaar to be the space they once wished existed.',
+    bio: 'Driven by a belief that healing is a human right, not a privilege. Built Manasvikaar to be the space they once wished existed',
     imgAlt: 'Moitree Sarkar',
     imgSrc: '/about/team/member1.png',
     name: 'Moitree Sarkar',
