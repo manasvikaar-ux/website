@@ -6,8 +6,6 @@ export const aboutStorySectionSchema = z.object({
 });
 
 export const aboutStorySchema = z.object({
-  imgAlt: z.string(),
-  imgSrc: z.string(),
   sections: z.array(aboutStorySectionSchema),
   title: z.string(),
 });

@@ -27,15 +27,6 @@ export const StorySection = () => (
               ))}
             </div>
           ))}
-          <div className="pt-8">
-            <Image
-              alt={aboutStory.imgAlt}
-              className="h-80 w-full rounded-xl border border-gray-900 object-cover shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] grayscale transition-all duration-500 hover:grayscale-0"
-              height={320}
-              src={aboutStory.imgSrc}
-              width={800}
-            />
-          </div>
         </div>
       </div>
     </div>

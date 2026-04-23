@@ -1,8 +1,6 @@
 import { aboutStorySchema } from '@/features/about/schemas/story.schema';
 
 export const aboutStory = aboutStorySchema.parse({
-  imgAlt: 'Team brainstorming session',
-  imgSrc: '/about/story/story.png',
   sections: [
     {
       heading: '',

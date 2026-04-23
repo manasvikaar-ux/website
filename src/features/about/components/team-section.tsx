@@ -7,7 +7,7 @@ export const TeamSection = () => (
       <h2 className="mb-16 text-center font-display text-4xl font-semibold text-gray-900 lg:text-4xl">
         {aboutTeamSection.title}
       </h2>
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-1 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-1 lg:grid-cols-2">
         {aboutTeam.map((member) => (
           <div className="group text-center" key={member.name}>
             <div className="relative mx-auto mb-6 h-48 w-48">
@@ -30,7 +30,9 @@ export const TeamSection = () => (
             >
               {member.role}
             </p>
-            <p className="text-sm text-gray-600">{member.bio}</p>
+            <p className="mx-auto max-w-lg text-center text-sm text-gray-600">
+              {member.bio}
+            </p>
           </div>
         ))}
       </div>

@@ -18,19 +18,10 @@ export const aboutTeam = z.array(aboutTeamMemberSchema).parse([
     bio: 'A licensed psychologist with a background in trauma-informed care and expressive therapies. Guides the therapeutic approach across all programmes.',
     imgAlt: 'Lead Therapist Name',
     imgSrc: '/about/team/member2.png',
-    name: 'Lead Therapist Name',
+    name: 'Anksuh Hazra',
     role: 'Head of Clinical Services',
     roleClassName: 'text-blue-500',
     shadowColor: 'bg-blue-200',
-  },
-  {
-    bio: 'Workshops Creates the spaces where people stop being alone with their feelings. Specialises in group facilitation, art therapy, and outreach.',
-    imgAlt: 'Community Lead Name',
-    imgSrc: '/about/team/member3.png',
-    name: 'Community Lead Name',
-    role: 'Head of Community',
-    roleClassName: 'text-green-600',
-    shadowColor: 'bg-green-200',
   },
 ]);
 
