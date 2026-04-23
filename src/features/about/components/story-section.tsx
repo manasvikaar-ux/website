@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { aboutStory } from '@/features/about/data/story.data';
 
 export const StorySection = () => (
