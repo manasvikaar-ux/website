@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Sora } from 'next/font/google';
 import Script from 'next/script';
+import { GoogleAnalytics } from '@/shared/components/google-analytics';
+import { WebVitals } from '@/shared/components/web-vitals';
 import { SiteFooter } from '@/shared/site-footer';
 import { SiteHeader } from '@/shared/site-header';
 import '@/styles/global.css';
@@ -48,6 +50,8 @@ export default function RootLayout({
         />
       </head>
       <body className="">
+        <GoogleAnalytics />
+        <WebVitals />
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="lazyOnload"
