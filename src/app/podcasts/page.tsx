@@ -1,5 +1,5 @@
-import { PodcastsPage } from '@/features/podcasts';
+import { notFound } from 'next/navigation';
 
-const Page = () => <PodcastsPage />;
+const Page = () => notFound();
 
 export default Page;

@@ -1,3 +1,4 @@
+import { ContactSection } from '@/features/about/components/contact-section';
 import { CtaSection } from '@/features/about/components/cta-section';
 import { HeroSection } from '@/features/about/components/hero-section';
 import { StatsSection } from '@/features/about/components/stats-section';
@@ -12,6 +13,7 @@ export const AboutPage = () => (
     <StorySection />
     <ValuesSection />
     <TeamSection />
+    <ContactSection />
     <CtaSection />
   </main>
 );

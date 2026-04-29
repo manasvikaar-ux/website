@@ -4,7 +4,9 @@ import { lucideIconSchema } from '@/shared/schemas/icon';
 export const facilityItemSchema = z.object({
   address: z.string(),
   hours: z.string(),
+  mapUrl: z.string(),
   name: z.string(),
+  phone: z.string(),
   type: z.string(),
 });
 

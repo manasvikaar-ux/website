@@ -1,3 +1,6 @@
+'use client';
+
+import Link from 'next/link';
 import { resourcesFaqItems } from '@/features/resources/data/faq.data';
 import {
   WhiteButton,
@@ -9,6 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/shared/components/ui/accordion';
+import { openCalendlyPopup } from '@/shared/lib/calendly';
 
 export const FaqSection = () => (
   <section className="bg-background-cream py-20">
@@ -57,8 +61,19 @@ export const FaqSection = () => (
               grow.
             </p>
             <div className="space-y-3">
-              <YellowButton className="w-full">Book Consultation</YellowButton>
-              <WhiteButton className="w-full">Contact Manasvikaar</WhiteButton>
+              <YellowButton
+                className="w-full"
+                onClick={() =>
+                  openCalendlyPopup('https://calendly.com/manasvikaar/30min')
+                }
+              >
+                Book Consultation
+              </YellowButton>
+              <Link href="/about#contact">
+                <WhiteButton className="w-full">
+                  Contact Manasvikaar
+                </WhiteButton>
+              </Link>
             </div>
           </div>
         </div>

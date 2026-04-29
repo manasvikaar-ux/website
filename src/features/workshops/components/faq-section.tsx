@@ -58,13 +58,13 @@ export const FaqSection = () => (
             <div className="flex w-full flex-col gap-3">
               <YellowButton
                 nativeButton={false}
-                render={<Link href="/workshops/custom" />}
+                render={<Link href="/about#contact" />}
               >
                 Request Custom Workshop
               </YellowButton>
               <WhiteButton
                 nativeButton={false}
-                render={<Link href="/contact" />}
+                render={<Link href="/about#contact" />}
               >
                 Contact Us
               </WhiteButton>

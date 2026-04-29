@@ -5,10 +5,7 @@ import {
   corporateHeroContent,
   corporateHeroVisuals,
 } from '@/features/corporate/data/hero.data';
-import {
-  WhiteButton,
-  YellowButton,
-} from '@/shared/components/neobrutal-button';
+import { YellowButton } from '@/shared/components/neobrutal-button';
 import { TrendingUpIcon as TrendingUp } from '@/shared/components/ui/trending-up';
 
 export const HeroSection = () => (
@@ -26,7 +23,6 @@ export const HeroSection = () => (
             <ApplyModal>
               <YellowButton>{corporateHeroContent.ctaPrimary}</YellowButton>
             </ApplyModal>
-            <WhiteButton>{corporateHeroContent.ctaSecondary}</WhiteButton>
           </div>
           <div className="flex items-center gap-4 text-sm font-medium text-gray-600">
             <div className="flex -space-x-3">

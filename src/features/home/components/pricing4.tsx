@@ -134,9 +134,15 @@ const Pricing4 = ({
                       ))}
                     </ul>
 
-                    <YellowButton className="w-full">
-                      {plan.buttonText}
-                    </YellowButton>
+                    <a
+                      href="https://wa.me/918050072071"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <YellowButton className="w-full">
+                        {plan.buttonText}
+                      </YellowButton>
+                    </a>
                   </div>
                 </div>
               );

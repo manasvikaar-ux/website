@@ -14,21 +14,30 @@ export const facilityCities = facilityCitiesSchema.parse([
 
 export const facilities = facilitiesSchema.parse([
   {
-    address: 'Dilshad Garden, New Delhi',
+    address: 'Dilshad Garden, New Delhi – 110095',
     hours: 'Open 24 Hours',
-    name: 'Institute of Human Behaviour & Allied Sciences',
+    mapUrl:
+      'https://www.google.com/maps/search/?api=1&query=Institute+of+Human+Behaviour+and+Allied+Sciences+Dilshad+Garden+Delhi',
+    name: 'Institute of Human Behaviour & Allied Sciences (IHBAS)',
+    phone: '+911122117390',
     type: 'Government Hospital',
   },
   {
-    address: 'Nehru Nagar, New Delhi',
-    hours: '9:00 AM - 8:00 PM',
+    address: '1, Nehru Nagar, New Delhi – 110065',
+    hours: '9:00 AM – 8:00 PM',
+    mapUrl:
+      'https://www.google.com/maps/search/?api=1&query=VIMHANS+Nehru+Nagar+New+Delhi',
     name: 'VIMHANS',
+    phone: '+911143588100',
     type: 'Private Hospital',
   },
   {
-    address: 'Ansari Nagar, New Delhi',
+    address: 'Ansari Nagar East, New Delhi – 110029',
     hours: 'Open 24 Hours',
-    name: 'AIIMS Psychiatry Department',
+    mapUrl:
+      'https://www.google.com/maps/search/?api=1&query=AIIMS+Psychiatry+Department+Ansari+Nagar+New+Delhi',
+    name: 'AIIMS – Psychiatry Department',
+    phone: '+911126588500',
     type: 'Government Hospital',
   },
 ]);

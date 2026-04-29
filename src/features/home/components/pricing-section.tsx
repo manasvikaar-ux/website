@@ -64,7 +64,13 @@ const PricingCard = ({ plan }: { plan: (typeof pricingPlans)[number] }) => {
         </ul>
       </CardFooter>
       <div className="mt-auto px-6 pb-6">
-        <Button className="w-full">{pricingSectionContent.getStarted}</Button>
+        <a
+          href="https://wa.me/918050072071"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Button className="w-full">{pricingSectionContent.getStarted}</Button>
+        </a>
       </div>
     </Card>
   );

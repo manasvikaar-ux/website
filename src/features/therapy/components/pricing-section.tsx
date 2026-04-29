@@ -79,11 +79,22 @@ export const PricingSection = () => (
               </div>
             </CardContent>
             <CardFooter className="border-t-0 bg-transparent p-0 pb-8">
-              {plan.highlighted === true ? (
-                <YellowButton className="w-full">Book Now</YellowButton>
-              ) : (
-                <WhiteButton className="w-full">Book Now</WhiteButton>
-              )}
+              <a
+                className="w-full"
+                href="https://wa.me/918050072071"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {plan.highlighted === true ? (
+                  <YellowButton className="w-full">
+                      Book Now
+                  </YellowButton>
+                ) : (
+                  <WhiteButton className="w-full">
+                      Book Now
+                  </WhiteButton>
+                )}
+              </a>
             </CardFooter>
           </Card>
         ))}

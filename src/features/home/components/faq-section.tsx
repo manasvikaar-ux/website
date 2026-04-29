@@ -22,7 +22,7 @@ export const FaqSection = () => (
             />
           </div>
           {/* Badge — counter-tilted */}
-          <div className="absolute top-6 right-0 rotate-2 rounded-xl border-2 border-gray-900 bg-background-peach py-2 font-display text-sm font-semibold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+          <div className="absolute top-6 right-0 rotate-2 rounded-xl border-2 border-gray-900 bg-background-peach px-4 py-2 font-display text-sm font-semibold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
             Common Inquiries
           </div>
         </div>

@@ -58,10 +58,18 @@ export const FacilitiesSection = () => (
                 </div>
               </div>
               <div className="flex w-full gap-3 md:w-auto">
-                <WhiteButton className="flex-1 md:flex-none">
-                  View Map
-                </WhiteButton>
-                <DarkButton className="flex-1 md:flex-none">Call</DarkButton>
+                <a
+                  href={facility.mapUrl}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <WhiteButton className="flex-1 md:flex-none">
+                    View Map
+                  </WhiteButton>
+                </a>
+                <a href={`tel:${facility.phone}`}>
+                  <DarkButton className="flex-1 md:flex-none">Call</DarkButton>
+                </a>
               </div>
             </div>
           ))}
