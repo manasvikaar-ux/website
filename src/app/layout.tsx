@@ -10,12 +10,41 @@ import '@/styles/global.css';
 const sora = Sora({ variable: '--font-sans' });
 
 export const metadata: Metadata = {
+  title: {
+    default: 'Manasvikaar – Mental Health & Wellness',
+    template: '%s | Manasvikaar',
+  },
   description:
     'Say goodbye to overwhelming stress. Manage your mental health and emotional well-being with comprehensive, guided support.',
-  title: 'Manasvikaar - Mental Health & Wellness',
-  icons: [
-    { rel: 'apple-touch-icon', url: '/apple-touch-icon.png' },
-  ],
+  metadataBase: new URL('https://www.manasvikaar.com'),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      {
+        url: '/shared/logo.png',
+        type: 'image/png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/shared/Manasvikaar logo white.png',
+        type: 'image/png',
+        media: '(prefers-color-scheme: dark)',
+      },
+    ],
+    apple: [{ url: '/apple-touch-icon.png' }],
+  },
+  openGraph: {
+    title: 'Manasvikaar – Mental Health & Wellness',
+    description:
+      'Say goodbye to overwhelming stress. Manage your mental health and emotional well-being with comprehensive, guided support.',
+    siteName: 'Manasvikaar',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@manasvikaar',
+  },
 };
 
 export const viewport: Viewport = {
@@ -31,19 +60,6 @@ export default function RootLayout({
   return (
     <html className={sora.variable} lang="en">
       <head>
-        {/* Favicon: dark logo for light mode, light logo for dark mode */}
-        <link
-          href="/shared/logo.png"
-          media="(prefers-color-scheme: light)"
-          rel="icon"
-          type="image/png"
-        />
-        <link
-          href="/shared/Manasvikaar%20logo%20white.png"
-          media="(prefers-color-scheme: dark)"
-          rel="icon"
-          type="image/png"
-        />
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
