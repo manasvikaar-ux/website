@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import { workshopsHero } from '@/features/workshops/data/hero.data';
-import { YellowButton } from '@/shared/components/neobrutal-button';
 
 export const HeroSection = () => (
   <section className="bg-background-cream pt-20 pb-0">
