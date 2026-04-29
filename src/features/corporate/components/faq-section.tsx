@@ -6,6 +6,7 @@ import {
   corporateFaqItems,
 } from '@/features/corporate/data/faq.data';
 import { WhiteButton } from '@/shared/components/neobrutal-button';
+import { openCalendlyPopup } from '@/shared/lib/calendly';
 import { CalendarDaysIcon as CalendarDays } from '@/shared/components/ui/calendar-days';
 import { ChevronDownIcon as ChevronDown } from '@/shared/components/ui/chevron-down';
 
@@ -70,7 +71,12 @@ export const FaqSection = () => {
               <p className="mb-6 text-sm text-gray-700">
                 {corporateFaqContent.ctaDescription}
               </p>
-              <WhiteButton className="w-full border-gray-900 bg-primary hover:bg-primary/90">
+              <WhiteButton
+                className="w-full border-gray-900 bg-primary hover:bg-primary/90"
+                onClick={() =>
+                  openCalendlyPopup('https://calendly.com/manasvikaar/30min')
+                }
+              >
                 <CalendarDays size={16} />
                 {corporateFaqContent.ctaButton}
               </WhiteButton>

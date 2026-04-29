@@ -16,7 +16,14 @@ export const HeroSection = () => (
           <p className="mb-10 max-w-lg text-lg text-gray-600">
             {aboutHero.description}
           </p>
-          <YellowButton>{aboutHero.cta}</YellowButton>
+          <YellowButton
+            nativeButton={false}
+            render={
+              <a href={aboutHero.ctaHref} rel="noopener noreferrer" target="_blank" />
+            }
+          >
+            {aboutHero.cta}
+          </YellowButton>
         </div>
         <div className="relative">
           <div

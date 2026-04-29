@@ -23,6 +23,6 @@
   "menuAccent": "subtle",
   "registries": {
     "@lucide-animated": "https://lucide-animated.com/r/{name}.json",
-    "@shadcnblocks": "https://shadcnblocks.com/r/{name}.json"
+    "@shadcnblocks": "https://shadcnblocks.com/r/{name}.json",
   }
 }

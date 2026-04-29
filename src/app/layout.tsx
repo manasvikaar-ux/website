@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: 'Manasvikaar - Mental Health & Wellness',
   icons: [
     { rel: 'apple-touch-icon', url: '/apple-touch-icon.png' },
-    { rel: 'icon', url: '/favicon.ico' },
   ],
 };
 
@@ -30,6 +29,19 @@ export default function RootLayout({
   return (
     <html className={sora.variable} lang="en">
       <head>
+        {/* Favicon: dark logo for light mode, light logo for dark mode */}
+        <link
+          href="/shared/logo.png"
+          media="(prefers-color-scheme: light)"
+          rel="icon"
+          type="image/png"
+        />
+        <link
+          href="/shared/Manasvikaar%20logo%20white.png"
+          media="(prefers-color-scheme: dark)"
+          rel="icon"
+          type="image/png"
+        />
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"

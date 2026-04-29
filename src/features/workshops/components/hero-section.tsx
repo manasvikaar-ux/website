@@ -3,7 +3,7 @@ import { workshopsHero } from '@/features/workshops/data/hero.data';
 import { YellowButton } from '@/shared/components/neobrutal-button';
 
 export const HeroSection = () => (
-  <section className="bg-background-cream pt-30 pb-30">
+  <section className="bg-background-cream pt-20 pb-0">
     <div className="container mx-auto px-5 text-center sm:px-6">
       {/* <div className="mb-5 inline-flex items-center rounded-full border border-teal-200 bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-900">
         {workshopsHero.badge}
@@ -16,9 +16,6 @@ export const HeroSection = () => (
       <p className="text-md mx-auto mb-10 max-w-2xl leading-relaxed text-gray-600">
         {workshopsHero.description}
       </p>
-      <Link href="#upcoming">
-        <YellowButton>{workshopsHero.cta}</YellowButton>
-      </Link>
     </div>
   </section>
 );

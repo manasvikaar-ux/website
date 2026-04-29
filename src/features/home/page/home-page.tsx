@@ -1,4 +1,5 @@
 import { FaqSection } from '@/features/home/components/faq-section';
+// import { GallerySection } from '@/features/home/components/gallery-section';
 import { HeroSection } from '@/features/home/components/hero-section';
 import { PartnersSection } from '@/features/home/components/partners-section';
 import { PricingSection } from '@/features/home/components/pricing-section';
@@ -16,6 +17,7 @@ export const HomePage = () => (
     <TestimonialsSection />
     <PricingSection />
     {/* <Pricing4 /> */}
+    {/* <GallerySection /> */}
     <FaqSection />
   </main>
 );

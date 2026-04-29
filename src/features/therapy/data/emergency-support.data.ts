@@ -6,7 +6,7 @@ export const emergencySupportInfo: EmergencySupportInfo = {
   ctaLabel: 'Call 1075',
   description:
     'We are not an emergency service. If you are in crisis, feeling suicidal, or in danger of harming yourself or others, please seek immediate help.',
-  secondaryCtaHref: '#',
+  secondaryCtaHref: '/resources',
   secondaryCtaLabel: 'View Crisis Resources',
   title: 'Emergency Support',
 };

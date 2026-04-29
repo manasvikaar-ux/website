@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -11,8 +9,6 @@ import {
   WhiteButton,
   YellowButton,
 } from '@/shared/components/neobrutal-button';
-import { openCalendlyPopup } from '@/shared/lib/calendly';
-
 export const HeroSection = () => (
   <section className="bg-background-cream pt-16 pb-24">
     <div className="container mx-auto px-5 sm:px-6">
@@ -30,9 +26,14 @@ export const HeroSection = () => (
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <YellowButton
-              onClick={() => {
-                openCalendlyPopup('https://calendly.com/manasvikaar/30min');
-              }}
+              nativeButton={false}
+              render={
+                <a
+                  href="https://chat.whatsapp.com/DHGDiOvL5PeGcxwNOOEBC3"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                />
+              }
             >
               {heroContent.primaryCta}
             </YellowButton>

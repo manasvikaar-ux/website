@@ -2,7 +2,8 @@ import { aboutHeroSchema } from '@/features/about/schemas/hero.schema';
 
 export const aboutHero = aboutHeroSchema.parse({
   badge: 'Who We Are',
-  cta: 'Our Values',
+  cta: 'Join Our Community',
+  ctaHref: 'https://chat.whatsapp.com/DHGDiOvL5PeGcxwNOOEBC3',
   description:
     "We believe that everyone deserves a safe space to heal, grow, and find their footing. Manasvikaar was built to bridge the gap between traditional therapy and the people who need it most, but haven't yet found their way in.",
   imgAlt: 'Group of friends supporting each other outdoors',

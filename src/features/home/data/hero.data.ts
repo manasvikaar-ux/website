@@ -27,7 +27,7 @@ export const heroContent = heroContentSchema.parse({
   badge: 'A Mental Health Platform For You, By You, With You.',
   description:
     "You don't need to have it all figured out to begin. Whether you're carrying something heavy or simply feeling off, Manasvikaar is a space where you can pause, be heard, and find your way forward. Guided by real people. Rooted in compassion.",
-  primaryCta: 'Book a Consultation',
+  primaryCta: 'Join Our Community',
   secondaryCta: 'Explore Workshops',
   titleLineOne: 'Your Story,',
   titleLineTwo: 'Has a Place Here',
