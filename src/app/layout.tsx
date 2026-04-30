@@ -18,19 +18,6 @@ export const metadata: Metadata = {
     'Say goodbye to overwhelming stress. Manage your mental health and emotional well-being with comprehensive, guided support.',
   metadataBase: new URL('https://www.manasvikaar.com'),
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      {
-        url: '/shared/logo.png',
-        type: 'image/png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/shared/Manasvikaar logo white.png',
-        type: 'image/png',
-        media: '(prefers-color-scheme: dark)',
-      },
-    ],
     apple: [{ url: '/apple-touch-icon.png' }],
   },
   openGraph: {
@@ -60,13 +47,25 @@ export default function RootLayout({
   return (
     <html className={sora.variable} lang="en">
       <head>
+        <GoogleAnalytics />
+        <link
+          href="/shared/logo.png"
+          media="(prefers-color-scheme: light)"
+          rel="icon"
+          type="image/png"
+        />
+        <link
+          href="/shared/Manasvikaar logo white.png"
+          media="(prefers-color-scheme: dark)"
+          rel="icon"
+          type="image/png"
+        />
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
         />
       </head>
       <body className="">
-        <GoogleAnalytics />
         <WebVitals />
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"

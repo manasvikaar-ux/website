@@ -15,9 +15,9 @@ export function GoogleAnalytics() {
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="beforeInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
