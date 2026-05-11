@@ -6,6 +6,23 @@ const withMDX = createMDX({});
 
 const baseConfig: NextConfig = {
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+  async headers() {
+    return [
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'Link',
+            value: [
+              '</sitemap.xml>; rel="sitemap"',
+              '</about>; rel="about"',
+              '</api/markdown?path=/>; rel="alternate"; type="text/markdown"',
+            ].join(', '),
+          },
+        ],
+      },
+    ];
+  },
   devIndicators: {
     position: 'bottom-right',
   },
